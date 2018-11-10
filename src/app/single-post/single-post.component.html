@@ -1,0 +1,18 @@
+<section>
+  <div class="singlepost">
+    
+    <h2>{{post.title}}</h2>
+    <img src="{{post.cover}}" />
+    <div class="content">{{post.content}}</div>
+    <div class="editForm">  
+      <button class="editbutton" (click)="enterEditMode()">Edit</button>
+      <div *ngIf="edit">
+        <button class="canceleditbutton" (click)="exitEditMode()">Cancel Edit</button>
+        <h3>Edit the Post</h3>
+        <app-update-post currentPostID = {{currentPostID}} ></app-update-post>
+      </div>  
+    </div>
+  </div>  
+
+ 
+</section>

@@ -1,0 +1,20 @@
+<section>
+   
+    <form (ngSubmit)="updatePost(updatePostsForm.value)" [formGroup]="updatePostsForm">
+      
+      <label for="title">Title:</label>
+      <input type="text" formControlName="title">
+    
+      <label for="content">Content:</label>
+      <textarea formControlName="content"></textarea>
+  
+      <label for="cover">Cover</label>
+      <input type="url" name="cover" formControlName="cover">
+    
+      <input type="submit" [disabled]="!updatePostsForm.valid" value="Submit">
+    </form>
+    <div>
+      <button class="delete" (click)="delete()">Delete Post</button>
+    </div>
+  </section>
+  

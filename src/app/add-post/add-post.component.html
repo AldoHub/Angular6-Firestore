@@ -1,0 +1,16 @@
+<section class="addformsection">
+
+  <form (ngSubmit)="addPost(postsForm.value)" [formGroup]="postsForm">
+    
+    <label for="title">Title:</label>
+    <input type="text" formControlName="title">
+  
+    <label for="content">Content:</label>
+    <textarea formControlName="content"></textarea>
+
+    <label for="cover">Cover</label>
+    <input type="url" name="cover" formControlName="cover">
+  
+    <input type="submit" [disabled]="!postsForm.valid" value="Submit">
+  </form>
+</section>
